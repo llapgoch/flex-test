@@ -1,0 +1,28 @@
+$gap: 10px;
+$perc: (25/150) * 100%;
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+
+  &--child{
+    border: 1px dotted black;
+    margin: $gap;
+    text-align: center;
+    padding: 10px;
+    flex-basis: calc(#{$perc} - (#{$gap} * 2));
+    box-sizing: border-box;
+
+    &:nth-child(7n){
+      background: red;
+      color: white;
+      flex-basis: 100%;
+    }
+  }
+}
+
+
+

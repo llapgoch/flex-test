@@ -1,0 +1,15 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .flex-container--child {
+    border: 1px dotted black;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    flex-basis: calc(16.66667% - (10px * 2));
+    box-sizing: border-box; }
+    .flex-container--child:nth-child(7n) {
+      background: red;
+      color: white;
+      flex-basis: 100%; }
