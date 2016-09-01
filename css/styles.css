@@ -1,14 +1,16 @@
 .flex-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
+  flex-flow: row wrap;
+  justify-content: space-around; }
   .flex-container--child {
     border: 1px dotted black;
     margin: 10px;
     text-align: center;
     padding: 10px;
     flex-basis: calc(16.66667% - (10px * 2));
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    flex-grow: 5;
+    /* Allows children on overflow lines to be justified */ }
     .flex-container--child:nth-child(7n) {
       background: red;
       color: white;

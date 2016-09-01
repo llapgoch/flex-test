@@ -3,9 +3,8 @@ $perc: (25/150) * 100%;
 
 .flex-container{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
+  flex-flow: row wrap;
+  justify-content: space-around;
 
 
   &--child{
@@ -15,6 +14,7 @@ $perc: (25/150) * 100%;
     padding: 10px;
     flex-basis: calc(#{$perc} - (#{$gap} * 2));
     box-sizing: border-box;
+    flex-grow: 5; /* Allows children on overflow lines to be justified */
 
     &:nth-child(7n){
       background: red;
